@@ -10,6 +10,7 @@ import org.hibernate.cfg.Configuration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class MainApp {
    public static void main(String[] args) throws SQLException {
@@ -23,17 +24,17 @@ public class MainApp {
             new AnnotationConfigApplicationContext(AppConfig.class);
 
       UserService userService = context.getBean(UserService.class);
-      userService.addCar(car1);
-      userService.addCar(car2);
-      userService.addCar(car3);
-      userService.addCar(car4);
+//      userService.addCar(car1);
+//      userService.addCar(car2);
+//      userService.addCar(car3);
+//      userService.addCar(car4);
 
 
-
-      userService.add(new User("User1", "Lastname1", "user1@mail.ru",car1));
-      userService.add(new User("User2", "Lastname2", "user2@mail.ru",car2));
-      userService.add(new User("User3", "Lastname3", "user3@mail.ru",car3));
-      userService.add(new User("User4", "Lastname4", "user4@mail.ru",car4));
+//
+//      userService.add(new User("User1", "Lastname1", "user1@mail.ru",car1));
+//      userService.add(new User("User2", "Lastname2", "user2@mail.ru",car2));
+//      userService.add(new User("User3", "Lastname3", "user3@mail.ru",car3));
+//      userService.add(new User("User4", "Lastname4", "user4@mail.ru",car4));
 
 
 
@@ -45,6 +46,11 @@ public class MainApp {
 //         System.out.println("Email = "+user.getEmail());
 //         System.out.println();
 //      }
+
+      List<User> find = userService.findByCar();
+      for (User user : find){
+         System.out.println(user.toString());
+      }
 
       context.close();
    }

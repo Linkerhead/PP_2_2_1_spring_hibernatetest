@@ -25,7 +25,13 @@ public class Car {
     public Car() {
     }
 
-
+    @Override
+    public String toString() {
+        return "Car{" +
+                ", model='" + model + '\'' +
+                ", series=" + series +
+                '}';
+    }
 
     public Long getId() {
         return id;

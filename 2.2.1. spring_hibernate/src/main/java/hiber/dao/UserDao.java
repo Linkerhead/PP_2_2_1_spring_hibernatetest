@@ -9,4 +9,6 @@ public interface UserDao {
    void addCar (Car car);
    void add(User user);
    List<User> listUsers();
+   List <User> findCar ();
+
 }
