@@ -30,14 +30,7 @@ public class CarServiceImpl implements CarService {
         return carDao.listCars();
     }
 
-    @Transactional
-    @Override
-    public List<User> findByCar(Car car) {
-        TypedQuery<User> query = carDao.findByCar();
-        query.setParameter("carName", car.getModel());
-        query.setParameter("carSeries", car.getSeries());
-        return query.getResultList();
-    }
+
 
 
 }

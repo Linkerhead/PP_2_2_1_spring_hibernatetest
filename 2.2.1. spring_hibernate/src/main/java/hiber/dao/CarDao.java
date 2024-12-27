@@ -13,6 +13,6 @@ public interface CarDao {
 
     List<Car> listCars();
 
-    TypedQuery<User> findByCar();
+
 
 }

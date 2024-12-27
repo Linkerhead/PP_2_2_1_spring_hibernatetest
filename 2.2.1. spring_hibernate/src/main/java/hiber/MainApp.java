@@ -34,10 +34,11 @@ public class MainApp {
         userService.add(new User("User3", "Lastname3", "user3@mail.ru", car3));
         userService.add(new User("User4", "Lastname4", "user4@mail.ru", car4));
 
-        System.out.println(carService.findByCar(car1));
-        System.out.println(carService.findByCar(car2));
-        System.out.println(carService.findByCar(car3));
-        System.out.println(carService.findByCar(car4));
+        System.out.println(userService.findByCar(car1));
+        System.out.println(userService.findByCar(car2));
+        System.out.println(userService.findByCar(car3));
+        System.out.println(userService.findByCar(car4));
+
 
 
         context.close();
